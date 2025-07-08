@@ -81,10 +81,6 @@ document.getElementById("formulario").addEventListener("submit", function(event)
     document.getElementById("mensagem-status").innerText = "Inscrição enviada com sucesso!";
     this.reset();
   })
-  .catch(err => {
-    console.error("Erro ao enviar:", err);
-    document.getElementById("mensagem-status").innerText = "Erro ao enviar. Tente novamente.";
-  });
 });
 
 </script>
