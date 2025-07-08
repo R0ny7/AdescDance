@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Conferência de Dança</title>
+  <link rel="stylesheet" href="style/conferencia.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="overlay">
+      <img src="img/conf1.png" alt="Fogo Logo" class="logo"/>
+      <h1> Vem aí a nossa 1º CONFERÊNCIA DE DANÇA </h1>
+    </div>
+  </header>
+
+  <section class="descricao">
+    <p>Um evento preparado com zelo para todos que entendem a dança como forma de adoração e expressão da Palavra. Cremos que o movimento pode carregar vida, cura e a presença real de Deus.</p>
+  </section>
+
+  <section class="convidados">
+    <img src="img/conf2.png" alt="Convidado 1" class="convidado-img"/>
+  </section>
+
+   <section class="descricao2">
+    <p>
+        Será um tempo de ensino, crescimento e entrega total diante do altar. A conferência reunirá ministérios que desejam dançar com propósito e profundidade. Nosso desejo é que cada coreografia seja uma pregação viva. Que Jesus seja visto, sentido e exaltado em cada gesto. 
+
+        Se você sente esse chamado, essa conferência é para você.
+        Inscreva-se e venha viver esse mover conosco. ✨🤍
+    </p>
+  </section> <section class="descricao">
+  
+
+  <section class="informacoes">
+    <h2>Informações</h2>
+    <p></strong> 02/08/2025 - 8h às 19h </p>
+    <p></strong>ADESC- Ministério de Madureira: Campo de São Cristóvão, 200- 20921-440, São Cristóvão, Rio de Janeiro.</p>
+  </section>
+
+   <section class="formulario">
+    <form id="formulario">
+            <input name="nome" placeholder="Nome" required>
+            <input name="email" placeholder="Email" required>
+            <input name="telefone" placeholder="Telefone" required>
+            <input name="idade" placeholder="Idade" required>
+            <input name="igreja" placeholder="Igreja" required>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <p id="mensagem-status"></p>
+
+    <!-- BOTÃO DE PAGAMENTO -->
+    <div class="pagamento">
+      <a href="https://mpago.la/2u8smTJ" target="_blank" class="botao-ml">
+        Pagar agora com Mercado Livre
+      </a>
+    </div>
+  </section>
+</body>
+
+<script>
+document.getElementById("formulario").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const nome = this.nome.value;
+  const email = this.email.value;
+  const telefone = this.telefone.value;
+  const idade = this.idade.value;
+  const igreja = this.igreja.value;
+
+  const dados = `nome=${encodeURIComponent(nome)}&email=${encodeURIComponent(email)}&telefone=${encodeURIComponent(telefone)}&idade=${encodeURIComponent(idade)}&igreja=${encodeURIComponent(igreja)}`;
+
+  fetch("https://script.google.com/macros/s/AKfycbxpHU6rEJ5n7NF7VHL_dN0CshIKX23UO4JH82_Ht52jO99GrGP_RfSWgt_DFOe76mNd8w/exec", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: dados
+  })
+  .then(res => res.json())
+  .then(res => {
+    document.getElementById("mensagem-status").innerText = "Inscrição enviada com sucesso!";
+    this.reset();
+  })
+  .catch(err => {
+    console.error("Erro ao enviar:", err);
+    document.getElementById("mensagem-status").innerText = "Erro ao enviar. Tente novamente.";
+  });
+});
+
+</script>
+</html>

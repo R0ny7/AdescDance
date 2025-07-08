@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #DD5081;
+  color: #fff;
+}
+
+.hero {
+  background: #DD5081;
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.logo {
+  width: 90%;
+  border-radius: 13px;
+  margin-bottom: 50px;
+}
+
+.overlay h1 {
+  font-size: 15px;
+}
+
+.overlay p {
+  font-size: 11px;
+}
+
+.overlay span {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+section {
+  padding: 20px 15px;
+  text-align: center;
+}
+
+.convidado-img {
+  width: 90%;
+  border-radius: 13px;
+  margin-bottom: 50px;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+input, button {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+
+input {
+  background: #fff;
+  color: #000;
+}
+
+button {
+  background: #ff3c88;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #e62e6f;
+}
+
+#mensagem-status {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
+.pagamento {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.botao-ml {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #ff3c88;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.botao-ml:hover {
+  background-color: #ff3c88;
+}

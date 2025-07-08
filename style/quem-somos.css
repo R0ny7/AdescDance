@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #DD5081;
+  color: white;
+  overflow-y: auto
+}
+
+.page {
+  min-height: 100vh;
+  width: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.content {
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.image1 {
+  width: 100%;
+  border-radius: 13px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+}
+
+.image2 {
+  margin-top: 56px;
+  width: 100%;
+  border-radius: 13px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  margin-top: 56px;
+}
+
+.sub {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.9;
+  margin-top: o;
+}
+
+.texto1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 34px;
+}
+
+.texto2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 56px;
+}
+
+.texto3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 28px;
+}
