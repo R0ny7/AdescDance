@@ -76,11 +76,17 @@ document.getElementById("formulario").addEventListener("submit", function(event)
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: dados
   })
-  .then(res => res.json())
+ .then(res => {
+    if (!res.ok) throw new Error("Erro na resposta da rede");
+    return res.json();
+  })
   .then(res => {
     document.getElementById("mensagem-status").innerText = "Inscrição enviada com sucesso!";
     this.reset();
   })
+  .catch(err => {
+    document.getElementById("mensagem-status").innerText = "Inscrição quase feita, faça o pagamento no link abaixo para garantir sua vaga.";
+  });
 });
 
 </script>
