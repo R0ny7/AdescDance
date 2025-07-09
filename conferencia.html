@@ -36,52 +36,37 @@
 
   <section class="informacoes">
     <h2>Informações</h2>
-    <p><strong>Data:</strong> 02/08/2025 - 8h às 19h</p>
+    <p><strong>Data:</strong> 02/08/2025 - 8h às 17h</p>
     <p><strong>Local:</strong> ADESC - Ministério de Madureira: Campo de São Cristóvão, 200 - 20921-440, São Cristóvão, Rio de Janeiro.</p>
     <p>Mais Informações: Fernanda (21) 97879-7425.</p>
   </section>
 
   <section class="formulario">
-    <form id="formulario">
-      <input name="nome" placeholder="Nome" required>
-      <input name="email" placeholder="Email" required>
-      <input name="telefone" placeholder="Telefone" required>
-      <input name="idade" placeholder="Idade" required>
-      <input name="igreja" placeholder="Igreja" required>
-      <button type="submit">Enviar</button>
-    </form>
+  <form id="formulario" method="POST" action="https://script.google.com/macros/s/AKfycbxpHU6rEJ5n7NF7VHL_dN0CshIKX23UO4JH82_Ht52jO99GrGP_RfSWgt_DFOe76mNd8w/exec" target="iframeInvisible">
+    <input name="nome" placeholder="Nome" required>
+    <input name="email" placeholder="Email" type="email" required>
+    <input name="telefone" placeholder="Telefone" required>
+    <input name="idade" placeholder="Idade" required>
+    <input name="igreja" placeholder="Igreja" required>
+    <button type="submit">Enviar</button>
+  </form>
 
-    <p id="mensagem-status"></p>
+  <p id="mensagem-status" style="text-align: center; font-weight: bold; color: rgb(255, 255, 255);"></p>
 
-    
+  <!-- Iframe invisível para evitar recarregamento de página -->
+  <iframe name="iframeInvisible" style="display: none;"></iframe>
+</section>
 
-  </section>
+<script>
+  document.getElementById("formulario").addEventListener("submit", function() {
+    const status = document.getElementById("mensagem-status");
+    status.innerText = "Quase Lá... Agora falta apenas fazer o pagamento no site que estamos lhe direcionando. :)";
 
-  <script>
-    document.getElementById("formulario").addEventListener("submit", function(event) {
-      event.preventDefault();
-
-      const nome = this.nome.value;
-      const email = this.email.value;
-      const telefone = this.telefone.value;
-      const idade = this.idade.value;
-      const igreja = this.igreja.value;
-
-      const dados = `nome=${encodeURIComponent(nome)}&email=${encodeURIComponent(email)}&telefone=${encodeURIComponent(telefone)}&idade=${encodeURIComponent(idade)}&igreja=${encodeURIComponent(igreja)}`;
-
-      fetch("https://script.google.com/macros/s/AKfycbxpHU6rEJ5n7NF7VHL_dN0CshIKX23UO4JH82_Ht52jO99GrGP_RfSWgt_DFOe76mNd8w/exec", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: dados
-      })
-      .then(res => {
-        if (!res.ok) throw new Error("Erro na resposta da rede");
-        return res.text(); 
-      })
-      .then(res => {
-        window.location.href = "https://mpago.la/2u8smTJ";
-      })
-    });
-  </script>
+    // Redireciona após 1 segundo
+    setTimeout(() => {
+      window.location.href = "https://mpago.la/2u8smTJ";
+    }, 1000);
+  });
+</script>
 </body>
 </html>
