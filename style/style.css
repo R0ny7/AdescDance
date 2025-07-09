@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #1a1a1a;
+  background-image: linear-gradient(to right, rgb(221,80,189), rgb(220, 79, 128), rgb(201, 42, 96));
   color: white;
   overflow-y: auto
 }
@@ -17,7 +17,6 @@ body {
   width: 100%;
   max-width: 480px;
   margin: 0 auto;
-  background-color: #DD5081;
 }
 
 .top-image img {

@@ -1,12 +1,11 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #DD5081;
+  background-image: linear-gradient(to right, rgb(221,80,189), rgb(220, 79, 128), rgb(201, 42, 96));
   color: #fff;
 }
 
 .hero {
-  background: #DD5081;
   text-align: center;
   padding: 30px 10px;
 }
@@ -97,4 +96,10 @@ button:hover {
 
 .botao-ml:hover {
   background-color: #ff3c88;
+}
+
+
+.pagamento p {
+  font-size: 11px;
+  background-color: #000;
 }
